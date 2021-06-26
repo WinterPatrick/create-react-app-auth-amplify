@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import bgi from './images/Login_Background.jpg';
 import './App.css';
 import { withAuthenticator } from 'aws-amplify-react'
 import Amplify, { Auth } from 'aws-amplify';
@@ -29,4 +30,10 @@ class App extends Component {
   }
 }
 
+function App() {
+  return (
+    <div  styles={{ backgroundImage:`url(${bgi})` }}>
+    </div>
+  );
+}
 export default withAuthenticator(App, true);
